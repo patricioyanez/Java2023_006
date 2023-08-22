@@ -1,4 +1,7 @@
 
+import java.util.Scanner;
+
+
 public class PrincipalIf {
     public static void main(String[] args) {
         System.out.println("Sentencia IF");
@@ -39,10 +42,15 @@ public class PrincipalIf {
         {
             System.out.println("Es un numero grande");
         }
-        // ejercicio: solicitar la edad al usuario y clasificarlo
-        // por su generación
-        int edad = 25;        
-        if(edad > 11 && edad <= 23)
+        // ejercicio: solicitar la edad al usuario 
+        // y clasificarlo por su generación
+        int edad = 0;
+        
+        Scanner leerTeclado = new Scanner(System.in);
+        System.out.print("Escriba su edad: ");        
+        edad = leerTeclado.nextInt();
+        // && -> and   || -> or
+        if(edad > 11 && edad <= 23) // 12... 23
         {
             System.out.println("Ud. es la generación de Z");
         }
