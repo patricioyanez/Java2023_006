@@ -39,9 +39,9 @@ public class PrincipalIf {
         {
             System.out.println("Es un numero grande");
         }
-        
-        int edad = 25;
-        
+        // ejercicio: solicitar la edad al usuario y clasificarlo
+        // por su generación
+        int edad = 25;        
         if(edad > 11 && edad <= 23)
         {
             System.out.println("Ud. es la generación de Z");
