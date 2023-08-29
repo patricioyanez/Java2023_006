@@ -41,7 +41,21 @@ public class PrincipalString {
         System.out.println("rut: " + rut.substring(0, 2));
         System.out.println("rut: " + rut.substring(2, 5));
         
+        System.out.println("Hola Ana".substring(0, 4));        
+        System.out.println("Hola Ana".substring(5));
+
+        System.out.println("index of espacio: " + 
+                                "abc de".indexOf(" "));
+        
         // Ejercicios:
-        // mostrar el primer nombre de juan carlos
+        // mostrar el primer nombre de: 
+        //juan carlos
+        //Patricio alejandro
+        //Ana Maria
+        String nombre = "Ana Maria";
+        System.out.println(nombre.substring(0, nombre.indexOf(" ")));
+        
+        
+        
     }
 }
