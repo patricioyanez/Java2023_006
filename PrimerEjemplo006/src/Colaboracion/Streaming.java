@@ -35,8 +35,8 @@ public class Streaming {
     }
 
     public String imprimir() {
-        return "cancion=" + cancion + 
-                ", segundosReproducidos=" + segundosReproducidos;
+        return "cancion\n" + cancion.imprimir() + 
+     "\nsegundosReproducidos=" + segundosReproducidos;
     }
     
     
