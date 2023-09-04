@@ -8,11 +8,16 @@ public class Principal {
         cancion1.setNombre("Llueve Sobre La Ciudad");
         cancion1.setArtista("Los Bunkers");
         cancion1.setAlbum("Vida de perros");
-        cancion1.setDuracion(200);
+        cancion1.setDuracion(250);
         cancion1.setGenero("rock");
+        
+        System.out.println("Nombre de canción: " + cancion1.getNombre() );
         
         Streaming spotify = new Streaming(cancion1, 100);
         
         System.out.println(spotify.imprimir());
+        
+        // Ejercicios:
+        // mostrar cuantos segundos quedan de la canción
     }
 }
