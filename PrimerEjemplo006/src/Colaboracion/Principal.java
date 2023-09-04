@@ -18,6 +18,14 @@ public class Principal {
         System.out.println(spotify.imprimir());
         
         // Ejercicios:
-        // mostrar cuantos segundos quedan de la canción
+        // crear un método mostrar cuantos segundos quedan de la canción
+        System.out.println("Segundos faltantes: " + 
+                            spotify.segundosFaltantes());
+        
+        
+        // ejercicio 2:
+        // Crear otra canción y reproducirla.
+        // solicitar los datos por la consola. 
+        // todos los datos son obligatorios.
     }
 }

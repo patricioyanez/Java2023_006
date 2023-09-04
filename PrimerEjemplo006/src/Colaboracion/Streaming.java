@@ -40,6 +40,10 @@ public class Streaming {
      "\nsegundos Reproducidos=" + segundosReproducidos;
     }
     
+    public int segundosFaltantes()
+    {
+        return cancion.getDuracion() - segundosReproducidos;
+    }
     
     
 }
