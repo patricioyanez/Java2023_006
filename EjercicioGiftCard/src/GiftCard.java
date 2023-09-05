@@ -88,7 +88,7 @@ public class GiftCard {
     
     public boolean validarCompra(int valorCompra)
     {
-        if(this.monto <= valorCompra)
+        if(this.monto >= valorCompra)
             return true;
         else
             return false;
