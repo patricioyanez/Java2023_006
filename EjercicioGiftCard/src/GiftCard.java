@@ -72,5 +72,25 @@ public class GiftCard {
                 "\n**** Trabajador ***\n" + trabajador.imprimir();
     }
     
+    public boolean validarClave()
+    {
+        // obtiene los 4 primeros digitos del rut
+        String rutTemporal = this.trabajador.getRut().
+                                replace(".","").
+                                substring(0, 4);
+        // convertir a numero
+        int rutClave = Integer.parseInt(rutTemporal);
+        if(rutClave == this.clave)
+            return true;
+        else
+            return false;
+    }
     
+    public boolean validarCompra(int valorCompra)
+    {
+        if(this.monto <= valorCompra)
+            return true;
+        else
+            return false;
+    }
 }
