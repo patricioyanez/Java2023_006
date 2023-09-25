@@ -29,7 +29,7 @@ public class Principal {
         System.out.println(numeros.size());
         
         nombres.add("Robin");
-        nombres.add("Ussop");
+        nombres.add("Usopp");
         for(String nombre: nombres)
         {
             System.out.println("nombre: " + nombre);
