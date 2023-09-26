@@ -30,7 +30,7 @@ public class Principal {
         
         nombres.add("Robin");
         nombres.add("Usopp");
-        for(String nombre: nombres)
+        for(Booelan nombre: nombres)
         {
             System.out.println("nombre: " + nombre);
         }
