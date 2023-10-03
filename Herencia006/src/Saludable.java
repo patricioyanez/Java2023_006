@@ -19,7 +19,12 @@ public class Saludable extends Comida {
     }
 
     public String imprimir() {
-        return "Saludable{" + "esOrigenNatural=" + esOrigenNatural + '}';
+        return  " **** Comida Saludable ****" +
+                "\nCodigo           : " + getCodigo() + 
+                "\nNombre           : " + getNombre() + 
+                "\nCalorias         : " + getCalorias() + 
+                "\nSodio            : " + getSodio() +                 
+                "\nEs Origen Natural: " + (esOrigenNatural?"Si":"No");
     }
     
     
