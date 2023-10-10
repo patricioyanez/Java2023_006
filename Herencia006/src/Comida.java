@@ -54,5 +54,10 @@ public class Comida {
         return "Comida{" + "codigo=" + codigo + ", nombre=" + nombre + ", calorias=" + calorias + ", sodio=" + sodio + '}';
     }
     
+// sobre escritura    
+    public String tipoComida()
+    {
+        return "Comida en general";
+    }
     
 }

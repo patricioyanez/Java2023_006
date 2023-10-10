@@ -17,5 +17,9 @@ public class Principal {
         // para cada subclase. Crear 1 perro y 2 gatos, mostrar sus datos.
         
         // Leer las ppt 2.1.1 y 2.2.1
+        
+        System.out.println("==== Sobre Carga =====");
+        System.out.println(manzana.tipoComida() );
+        System.out.println(manzana.toString());
     }
 }
