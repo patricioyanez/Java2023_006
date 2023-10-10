@@ -39,7 +39,22 @@ public class Saludable extends Comida {
     }
 
     // sobre carga
-
+    public String cocinar()
+    {
+        return "Cocinar por 15 minutos";
+    }
+    
+    public String cocinar(int minutos)
+    {
+        return "Cocinar por " + minutos +"  minutos";
+    }
+    
+    public String cocinar(int minutos, String tipoCoccion)
+    {
+        return "Cocinar por " + minutos + "  minutos." +
+                " Tipo de cocción "  + tipoCoccion;
+    }
+    
     
     
     

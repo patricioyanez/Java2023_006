@@ -21,5 +21,18 @@ public class Principal {
         System.out.println("==== Sobre Carga =====");
         System.out.println(manzana.tipoComida() );
         System.out.println(manzana.toString());
+        
+        String comoCocinar1 = "";
+        String comoCocinar2 = "";
+        String comoCocinar3 = "";
+        
+        comoCocinar1 = manzana.cocinar();
+        comoCocinar2 = manzana.cocinar(41);
+        comoCocinar3 = manzana.cocinar(22, "freir");
+                
+        System.out.println("=== Sobre Carga ===");
+        System.out.println(comoCocinar1);
+        System.out.println(comoCocinar2);
+        System.out.println(comoCocinar3);
     }
 }
