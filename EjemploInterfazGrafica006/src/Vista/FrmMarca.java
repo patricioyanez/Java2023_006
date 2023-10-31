@@ -164,6 +164,10 @@ public class FrmMarca extends javax.swing.JFrame {
             
             JOptionPane.showMessageDialog(this, "Datos Guardados");
             btnLimpiar.doClick();
+            
+            // Ejercicio 18: Crear Tabla, modelo y Formulario
+            // para la entidad Cargo (gerente, vendedor, supervisor, etc)
+            // los atributos son: id, nombre y habilitado.
         }
         
         
