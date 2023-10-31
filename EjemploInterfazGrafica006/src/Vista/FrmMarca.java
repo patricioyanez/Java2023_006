@@ -1,12 +1,13 @@
 
 package Vista;
 
+import Modelo.Marca;
 import javax.swing.JOptionPane;
 
 
 public class FrmMarca extends javax.swing.JFrame {
-
-
+    
+    private Marca marca = new Marca();
     public FrmMarca() {
         initComponents();
     }
@@ -142,7 +143,7 @@ public class FrmMarca extends javax.swing.JFrame {
         // TODO add your handling code here:
         txtNombre.setText("");
         chkHabilitado.setSelected(false);
-        
+        marca.setId(0);
         txtNombre.requestFocus();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
@@ -156,9 +157,13 @@ public class FrmMarca extends javax.swing.JFrame {
         }
         else
         {
-            // guardar
+            // guardar datos a la base de datos:
+            // 1. traspasar los datos del form al objeto
+            marca.setNombre(txtNombre.getText().trim().toUpperCase());
+            marca.setHabilitado(chkHabilitado.isSelected());
             
-            
+            JOptionPane.showMessageDialog(this, "Datos Guardados");
+            btnLimpiar.doClick();
         }
         
         
