@@ -1,6 +1,7 @@
 
 package Vista;
 
+import Controlador.ControladorMarca;
 import Modelo.Marca;
 import javax.swing.JOptionPane;
 
@@ -162,9 +163,18 @@ public class FrmMarca extends javax.swing.JFrame {
             marca.setNombre(txtNombre.getText().trim().toUpperCase());
             marca.setHabilitado(chkHabilitado.isSelected());
             
-            JOptionPane.showMessageDialog(this, "Datos Guardados");
-            btnLimpiar.doClick();
+            ControladorMarca cm = new ControladorMarca();
+            boolean resultado = cm.agregar(marca);
             
+            if(resultado)
+            {
+                JOptionPane.showMessageDialog(this, "Datos Guardados");
+                btnLimpiar.doClick();
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this, "Error en la ejecución");
+            }
             // Ejercicio 18: Crear Tabla, modelo y Formulario
             // para la entidad Cargo (gerente, vendedor, etc)
             // los atributos son: id, nombre y habilitado.
