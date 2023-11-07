@@ -14,7 +14,7 @@ insert into marca values (null, 'Fiat', 1);
 insert into marca values (null, 'MG', 1);
 insert into marca values (null, 'Peugeot', 1);
 
-
+select * from marca
            -- Ejercicio 18: Crear Tabla, modelo y Formulario
             -- para la entidad Cargo (gerente, vendedor, etc)
             -- los atributos son: id, nombre y habilitado.
