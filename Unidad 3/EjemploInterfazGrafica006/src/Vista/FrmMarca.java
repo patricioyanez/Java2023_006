@@ -177,12 +177,18 @@ public class FrmMarca extends javax.swing.JFrame {
             marca.setHabilitado(chkHabilitado.isSelected());
             
             ControladorMarca cm = new ControladorMarca();
-            boolean resultado = cm.agregar(marca);
+            boolean resultado = false;
+            
+            if(marca.getId() > 0)
+                resultado = cm.actualizar(marca);
+            else
+                resultado = cm.agregar(marca);
             
             if(resultado)
             {
                 JOptionPane.showMessageDialog(this, "Datos Guardados");
                 btnLimpiar.doClick();
+                btnListar.doClick();
             }
             else
             {
