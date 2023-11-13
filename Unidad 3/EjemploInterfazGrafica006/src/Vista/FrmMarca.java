@@ -54,6 +54,11 @@ public class FrmMarca extends javax.swing.JFrame {
         });
 
         btnEliminar.setText("Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
 
         btnListar.setText("Listar");
         btnListar.addActionListener(new java.awt.event.ActionListener() {
@@ -228,6 +233,27 @@ public class FrmMarca extends javax.swing.JFrame {
         chkHabilitado.setSelected(tabla.getValueAt(row, 2).
                                     toString().equals("true"));
     }//GEN-LAST:event_tablaMouseClicked
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        // TODO add your handling code here:
+        if(marca.getId() < 1)
+        {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar elemento a eliminar");
+            return;
+        }
+        
+        ControladorMarca cm = new ControladorMarca();
+        boolean fueEliminado = cm.eliminar(marca.getId());
+        
+        if(fueEliminado)
+        {
+            JOptionPane.showMessageDialog(this, "La información fue eliminada");
+            btnLimpiar.doClick();
+            btnListarActionPerformed(null);
+        }
+        else
+            JOptionPane.showMessageDialog(this, "Error al eliminar");
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
     /**
      * @param args the command line arguments
