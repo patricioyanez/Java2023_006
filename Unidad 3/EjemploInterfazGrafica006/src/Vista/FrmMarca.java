@@ -85,6 +85,11 @@ public class FrmMarca extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tabla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tabla);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -203,6 +208,20 @@ public class FrmMarca extends javax.swing.JFrame {
         for (Marca m : listado)
             dtm.addRow(new Object[]{m.getId(), m.getNombre(), m.getHabilitado()});
     }//GEN-LAST:event_btnListarActionPerformed
+
+    private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
+        // TODO add your handling code here:
+        int row = tabla.getSelectedRow();// fila seleccionar
+        
+        int id = 0;
+        
+        id = Integer.parseInt(tabla.getValueAt(row, 0).toString());
+        marca.setId(id);
+        
+        txtNombre.setText(tabla.getValueAt(row, 1).toString());
+        chkHabilitado.setSelected(tabla.getValueAt(row, 2).
+                                    toString().equals("true"));
+    }//GEN-LAST:event_tablaMouseClicked
 
     /**
      * @param args the command line arguments
