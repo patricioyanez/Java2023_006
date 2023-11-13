@@ -3,7 +3,9 @@ package Vista;
 
 import Controlador.ControladorMarca;
 import Modelo.Marca;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 
 public class FrmMarca extends javax.swing.JFrame {
@@ -54,6 +56,11 @@ public class FrmMarca extends javax.swing.JFrame {
         btnEliminar.setText("Eliminar");
 
         btnListar.setText("Listar");
+        btnListar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListarActionPerformed(evt);
+            }
+        });
 
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -183,6 +190,19 @@ public class FrmMarca extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
+        // TODO add your handling code here:
+        ControladorMarca cm = new ControladorMarca();
+        ArrayList<Marca> listado = cm.listarTodos();
+        
+        DefaultTableModel dtm = (DefaultTableModel)tabla.getModel();
+        // limpiar
+        dtm.setRowCount(0);
+        
+        for (Marca m : listado)
+            dtm.addRow(new Object[]{m.getId(), m.getNombre(), m.getHabilitado()});
+    }//GEN-LAST:event_btnListarActionPerformed
 
     /**
      * @param args the command line arguments
